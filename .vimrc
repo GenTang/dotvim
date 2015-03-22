@@ -63,22 +63,9 @@ set number
 
 " Set colorscheme
 colorscheme BlackSea
-
-" Python syntax
 let python_highlight_all = 1
 let python_version_2 = 1
 let python_highlight_space_errors = 0
-
-"-----------------------------------------------------------------------------
-" Tabular Plugin Settings
-"-----------------------------------------------------------------------------
-let mapleader=','
-if exists(":Tabularize")
-  nmap <Leader>a= :Tabularize /=<CR>
-  vmap <Leader>a= :Tabularize /=<CR>
-  nmap <Leader>a: :Tabularize /:\zs<CR>
-  vmap <Leader>a: :Tabularize /:\zs<CR>
-endif
 
 "-----------------------------------------------------------------------------
 " NERD Tree Plugin Settings
