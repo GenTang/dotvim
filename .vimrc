@@ -10,8 +10,14 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
+" HTML and CSS plugin
+Plugin 'mattn/emmet-vim'
+
 " Scala syntax
 Plugin 'derekwyatt/vim-scala'
+
+" Dash app plugins
+Plugin 'rizzatti/dash.vim'
 
 " Nerdtree plugin
 Plugin 'scrooloose/nerdtree'
@@ -43,6 +49,10 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+" Set windows size
+set lines=29
+set columns=100
+
 " Set filetype stuff to on
 filetype on
 filetype plugin on
@@ -64,10 +74,29 @@ set number
 " Set colorscheme
 colorscheme BlackSea
 
+" Set font
+set guifont=Monaco:h11
+
 " Set python syntax
 let python_highlight_all = 1
 let python_version_2 = 1
 let python_highlight_space_errors = 0
+
+" Enable emmet_install just for html/css
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+
+" Set html syntax
+autocmd FileType html setlocal ts=2 sw=2 expandtab
+let g:html_indent_script1 = "inc"
+let g:html_indent_style1 = "inc"
+let g:html_indent_inctags = "html,body,head"
+
+" Set javascript syntax
+autocmd Filetype javascript setlocal ts=4 sw=4 sts=0 expandtab
+
+" Set XML syntax
+au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 
 "-----------------------------------------------------------------------------
 " NERD Tree Plugin Settings
