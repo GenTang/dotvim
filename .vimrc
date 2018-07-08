@@ -34,6 +34,14 @@ Plugin 'godlygeek/tabular'
 " Tab autocompletion
 Plugin 'ervandew/supertab'
 
+" Google coding style
+Plugin 'google/vim-maktaba'
+Plugin 'google/vim-codefmt'
+Plugin 'google/vim-glaive'
+
+" Python pep8 style
+Plugin 'Vimjas/vim-python-pep8-indent'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
